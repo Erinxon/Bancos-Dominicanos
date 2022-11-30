@@ -1,0 +1,7 @@
+<div class="container mt-5 mb-5">
+  <app-search *ngIf="!isLoanding"></app-search>
+  <app-banks></app-banks>
+</div>
+<ngx-loading
+[show]="isLoanding">
+</ngx-loading>

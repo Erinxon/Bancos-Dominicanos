@@ -1,0 +1,44 @@
+  <div class="col card mb-3" style="flex-direction: row; min-height: 270px !important;">
+    <div class="content-img">
+      <img
+        [src]="bank?.image"
+        class="p-4"
+        style="width: 240px"
+      />
+    </div>
+    <div class="card-body px-2 py-2 p-0 content-bank">
+      <div>
+        <h5 class="card-title">{{ bank?.name }} - {{bank?.type}}</h5>
+        <ng-container *ngIf="!bank?.infoDissolution">
+          <p class="card-text">
+            <i class="fa-solid fa-money-bill"></i>
+              {{bank?.totalAssets}}
+          </p>
+          <p class="card-text">
+            <i class="fa-solid fa-people-group"></i>
+            {{bank?.emloyeeAmount}}
+          </p>
+          <p class="card-text">
+            <i class="fa-solid fa-shop"></i>
+            {{bank?.totalMarket}}
+          </p>
+        </ng-container>
+      </div>
+      <div  class="card text-white bg-secondary p-2" *ngIf="bank?.infoDissolution">
+        <p class="card-text ">
+          {{bank?.infoDissolution?.description}}
+        </p>
+      </div>
+      <div class="footer-info">
+        <div  class="badge p-2" [ngClass]="{'bg-secondary': !bank?.infoDissolution, 'bg-danger': bank?.infoDissolution}">
+          <small>{{bank?.status}}</small>
+        </div>
+        <div class="container-btn-detail" *ngIf="!bank?.infoDissolution">
+          <a href="" class="btn-detail" (click)="onSeleted()" data-bs-toggle="modal" data-bs-target="#detail">
+            <i class="fa-solid fa-memo-circle-info"></i>
+            Ver Detalles
+          </a>
+        </div>
+      </div>
+    </div>
+</div>

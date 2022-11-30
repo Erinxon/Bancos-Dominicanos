@@ -1,0 +1,10 @@
+<div class="searchbar mb-3" [formGroup]="form!">
+    <div class="w-100">
+      <input type="text" formControlName="searchTerm" placeholder="Buscar por nombre..." (input)="search()" class="form-control form-control">
+    </div>
+    <!--div>
+      <button class="btn btn-primary btn-sm" (click)="search()">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div-->
+</div>

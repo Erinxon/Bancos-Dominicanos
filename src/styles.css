@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    background-color: #0e1217;
+}
+
+.ngx-pagination li {
+    background-color: #FF5A33 !important;
+    color: #fff !important;
+}
+
+.ngx-pagination .disabled{
+    background-color: #0e1217 !important;
+    color: #ffff !important;
+}
+
+.ngx-pagination .current {
+    background: #3f51b5 !important;
+  }
+
+
+.ngx-pagination a, .ngx-pagination button {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.ngx-pagination {
+    display: flex;
+    justify-content: end !important;
+}
