@@ -21,16 +21,18 @@ export enum BankStatus {
     Dissolution = 'En disolución'
 }
 
-export interface SocialNetwork {
+export interface ExternalLinks {
     name: string;
     link: string;
     image: string;
 }
 
-export interface MobilesAppStore {
-    name: string;
-    link: string;
-    image: string;
+export interface SocialNetwork extends ExternalLinks {
+    
+}
+
+export interface MobilesAppStore extends ExternalLinks {
+
 }
 
 export interface BankDetail {
