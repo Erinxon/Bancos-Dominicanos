@@ -41,6 +41,7 @@ export interface BankDetail {
     registryNumber: string;
     businessName: string;
     rnc: string;
+    authorizedOffer: string;
     mainOffice: string;
     phone: string;
     email: string;

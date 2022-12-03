@@ -54,6 +54,12 @@
               <span>{{bankDetail?.rnc}}</span>
             </div>
           </li>
+          <li class="list-group-item" *ngIf="bankDetail?.authorizedOffer">
+            <div class="info_container">
+              <label>Autorizado a ofrecer</label>
+              <span>{{bankDetail?.authorizedOffer}}</span>
+            </div>
+          </li>
           <li class="list-group-item">
             <div class="info_container">
               <label>Oficina principal</label>
