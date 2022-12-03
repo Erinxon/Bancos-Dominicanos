@@ -37,6 +37,7 @@
 .card:hover{
     background-color:#FF5A33 !important;
     color: #ffff;
+    transition: all 1s ease;
 }
 
 .card:hover .container-btn-detail{
