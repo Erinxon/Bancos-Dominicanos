@@ -1,0 +1,7 @@
+.pagination{
+    justify-content: flex-end !important;
+}
+
+.page-link{
+    cursor: pointer !important;
+}

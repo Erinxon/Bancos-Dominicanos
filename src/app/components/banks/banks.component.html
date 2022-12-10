@@ -5,9 +5,21 @@
             <app-bank [bank]="bank" (selectbank)="onSeleted($event)"></app-bank>
         </div>
     </ng-container>
-    <!--div class="mr-2" *ngIf="banks.length > 0">
-        <pagination-controls previousLabel="Anterior" nextLabel="Siguiente" (pageChange)="currentPage = $event">
-        </pagination-controls>
-      </div-->
+    <div class="pagination">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item" [ngClass]="{'disabled': pagination.currentPage === 1}">
+                <a class="page-link" aria-label="Previous" (click)="previous()">
+                  <span aria-hidden="true">&laquo; Anterior</span>
+                </a>
+              </li>
+              <li class="page-item" [ngClass]="{'disabled': pagination.currentPage === pagination.totalPages}">
+                <a class="page-link"  aria-label="Next" (click)="next()">
+                  <span aria-hidden="true">Siguiente &raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+    </div>
 </div>
 <app-bank-detail [bank]="bank"></app-bank-detail>

@@ -10,8 +10,6 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { SearchComponent } from './components/search/search.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgOptimizedImage } from '@angular/common';
-import { NgxPaginationModule } from 'ngx-pagination';
-
 
 @NgModule({
   declarations: [
@@ -34,8 +32,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
   }),
   FormsModule,
   ReactiveFormsModule,
-  NgOptimizedImage,
-  NgxPaginationModule
+  NgOptimizedImage
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
