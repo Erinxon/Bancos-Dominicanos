@@ -1,13 +1,13 @@
 <app-search></app-search>
 <div class="row">
-    <ng-container *ngFor="let bank of banks | paginate: { itemsPerPage: 4, currentPage: currentPage }">
+    <ng-container *ngFor="let bank of banks">
         <div class="col-lg-6">
             <app-bank [bank]="bank" (selectbank)="onSeleted($event)"></app-bank>
         </div>
     </ng-container>
-    <div class="mr-2" *ngIf="banks.length > 0">
+    <!--div class="mr-2" *ngIf="banks.length > 0">
         <pagination-controls previousLabel="Anterior" nextLabel="Siguiente" (pageChange)="currentPage = $event">
         </pagination-controls>
-      </div>
+      </div-->
 </div>
 <app-bank-detail [bank]="bank"></app-bank-detail>
