@@ -25,10 +25,7 @@ export class BankDetailComponent implements OnChanges {
   private getDetailt(){
     this.banksService.getBankDetail(this.bank?.linkDetail || '').subscribe({
       next: res => {
-        this.bankDetail = {
-          ...res?.data,
-          webPage: res?.data.webPage.replace('https://sb.gob.do', '')
-        }
+        this.bankDetail = res?.data;
       }
     })
   }

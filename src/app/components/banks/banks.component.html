@@ -5,7 +5,7 @@
             <app-bank [bank]="bank" (selectbank)="onSeleted($event)"></app-bank>
         </div>
     </ng-container>
-    <div class="pagination">
+    <div class="pagination" *ngIf="banks.length > 0">
         <nav aria-label="Page navigation example">
             <ul class="pagination">
               <li class="page-item" [ngClass]="{'disabled': pagination.currentPage === 1}">

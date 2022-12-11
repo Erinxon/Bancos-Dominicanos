@@ -78,7 +78,15 @@
               <span>{{bankDetail?.email}}</span>
             </div>
           </li>
-          <li class="list-group-item">
+          <li class="list-group-item" *ngIf="bankDetail?.webPage">
+            <div class="info_container">
+              <label>Página web</label>
+              <span>
+                <a [href]="bankDetail?.webPage" target="_blank">{{bankDetail?.webPage}}</a>
+              </span>
+            </div>
+          </li>
+          <li class="list-group-item" *ngIf="bankDetail?.socialNetworks">
             <div class="info_container">
               <label>Redes Sociales</label>
               <div class="image-container">
@@ -90,7 +98,7 @@
               </div>
             </div>
           </li>
-          <li class="list-group-item">
+          <li class="list-group-item" *ngIf="bankDetail?.mobilesAppStore">
             <div class="info_container">
               <label>Aplicación móvil</label>
               <div class="image-container-mobilesAppStore">
